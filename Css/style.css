@@ -29,7 +29,7 @@ body {
   height: calc(100dvh - 40px);
   max-height: 720px;
   border: 9px solid #060606;
-  box-shadow: 0 0 4px 2px #c0b7cd, 0 0 0 6px #342c3f, 0 0 0px 7px black;
+  box-shadow: 0 0 4px 2px rgb(93 2 119), 0 0 0 6px #5d0277c2, 0 0 0px 7px black;
 }
 
 .second-container {
