@@ -5,158 +5,121 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  min-width: 330px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100dvh;
-  font-size: 15px;
-  line-height: 20px;
-  margin: 0;
-  padding: 0;
-  overflow: auto;
-  color: white;
-  background: #e1e1e1;
+:root {
+  --main-color: rgb(93 2 119);
 }
 
-.main-container {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  max-width: 330px;
+body {
+  background-color: aliceblue;
+  max-height: 100vh;
+  overflow-y: hidden;
+  display: grid;
+  place-content: center;
+  margin-top: 10px;
+  color: white;
+}
+
+.container {
+  max-width: 360px;
+  width: 340px;
+  height: 98vh;
+  max-height: 98vh;
+  border: 8px solid var(--main-color);
   border-radius: 50px;
-  height: calc(100dvh - 40px);
-  max-height: 720px;
-  border: 9px solid #060606;
-  box-shadow: 0 0 4px 2px rgb(93 2 119), 0 0 0 6px #5d0277c2, 0 0 0px 7px black;
+}
+
+.second-container::-webkit-scrollbar {
+  display: none;
 }
 
 .second-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  width: 200%;
-  margin-left: -100%;
+  max-width: 350px;
+  width: 324px;
+  height: 96vh;
+  max-height: 96vh;
+  border-radius: 42px;
+  border: 8px solid black;
+  overflow-y: scroll;
 }
 
-.three-section {
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.tab-container {
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  text-align: center;
-  user-select: none;
-  padding: 30px 0;
-  box-sizing: border-box;
-}
-
-.headercard {
-  padding: 0;
-}
-
-.scroll::-webkit-scrollbar {
-  width: 0px;
-}
-
-.profile-img {
-  width: 100%;
-  height: 445px;
-  max-height: 445px;
-  margin: 0;
-  position: relative;
-  z-index: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  /* background: linear-gradient(225deg, #184a67, #1d587a); */
-}
-
-.imagemascota {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-}
-
-.info-profile {
-  width: 100%;
-  position: relative;
-  border-radius: 30px 30px 0 0;
-  margin-top: -40px;
+.container-image {
+  max-width: 308px;
+  height: 410px;
+  max-height: 410px;
   z-index: 1;
-  padding: 10px 0 30px;
-  background: rgb(93 2 119);
+  background-image: url("https://joselgutierrez28.github.io/Bealy/Img/Bealy.jpeg");
+  background-size: cover;
+  background-position: center;
 }
 
-.titulo {
+.container-info {
+  background-color: var(--main-color);
+  width: 308px;
+  z-index: 2;
+  border-radius: 30px;
+  margin-top: -30px;
+}
+
+.title {
   font-size: 56px;
   line-height: 80px;
+  text-align: center;
 }
 
 .container-icons {
-  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
+  justify-content: space-around;
+  margin-top: 28px;
 }
 
-.iconsdescripcion {
+.icons {
   font-size: 40px;
-  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
 }
 
-.descripcion-mascota {
-  text-align: left;
-  width: calc(100% - 50px);
-  margin: 30px auto 40px;
-  font-size: 14px;
+.text-icons {
+  font-size: 15px;
+  font-weight: 100;
+}
+
+p,
+b {
+  font-size: 16px;
   line-height: 22px;
+  margin: 32px 16px;
 }
 
-.linea-top-call {
+hr {
   border: 1px solid #ffffff24;
 }
 
-.container-contactme {
-  padding: 20px 15px 5px;
+h2 {
+  font-size: 16px;
   text-align: center;
-  box-sizing: border-box;
-  position: relative;
-  width: 100%;
-  max-width: 345px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 90px;
+  margin-top: 8px;
 }
 
-.icons-contactme {
-  position: relative;
-  font-size: 25px;
-  border-radius: 10px;
-  width: calc(25% - 15px);
-  margin-bottom: 15px;
-  height: 45px;
+.description-buttons {
+  padding: 20px 15px 5px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  width: calc(50% - 15px);
-  box-shadow: -2px 2px 8px 0px #00000099, 1px -1px 1px -1px #ffffff99;
-  text-decoration: none;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+button {
+  width: 45%;
+  margin-bottom: 16px;
+  box-shadow: -2px 6px 6px 0px #00000099, 1px -1px 1px -1px #ffffff99;
+  background-color: transparent;
+  border-radius: 10px;
+  border-color: transparent;
+  height: 40px;
+}
+
+.icon-contact {
+  font-size: 30px;
   color: white;
 }
