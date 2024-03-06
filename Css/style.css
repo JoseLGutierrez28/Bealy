@@ -22,8 +22,8 @@ body {
 .container {
   max-width: 360px;
   width: 340px;
-  height: 98vh;
-  max-height: 98vh;
+  height: auto;
+  max-height: 90vh;
   border: 8px solid var(--main-color);
   border-radius: 50px;
 }
@@ -35,8 +35,8 @@ body {
 .second-container {
   max-width: 350px;
   width: 324px;
-  height: 96vh;
-  max-height: 96vh;
+  height: auto;
+  max-height: 90vh;
   border-radius: 42px;
   border: 8px solid black;
   overflow-y: scroll;
