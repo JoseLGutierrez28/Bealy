@@ -15,14 +15,14 @@ body {
   overflow-y: hidden;
   display: grid;
   place-content: center;
-  margin-top: 8px;
+  margin-top: 10px;
   color: white;
 }
 
 .container {
   max-width: 360px;
   width: 340px;
-  max-height: 728px;
+  max-height: 724px;
   border: 8px solid var(--main-color);
   border-radius: 50px;
 }
@@ -34,7 +34,7 @@ body {
 .second-container {
   max-width: 350px;
   width: 324px;
-  max-height: 712px;
+  max-height: 708px;
   border-radius: 42px;
   border: 8px solid black;
   overflow-y: scroll;
