@@ -22,7 +22,7 @@ body {
 .container {
   max-width: 360px;
   width: 340px;
-  max-height: 720px;
+  max-height: 728px;
   border: 8px solid var(--main-color);
   border-radius: 50px;
 }
@@ -34,7 +34,7 @@ body {
 .second-container {
   max-width: 350px;
   width: 324px;
-  height: 96vh;
+  max-height: 712px;
   border-radius: 42px;
   border: 8px solid black;
   overflow-y: scroll;
