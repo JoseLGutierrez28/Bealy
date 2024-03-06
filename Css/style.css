@@ -47,7 +47,7 @@ body {
   height: 410px;
   max-height: 410px;
   z-index: 1;
-  background-image: url("https://joselgutierrez28.github.io/Bealy/Img/Bealy.jpeg");
+  background-image: url("../Img/Bealy.jpeg");
   background-size: cover;
   background-position: center;
 }
