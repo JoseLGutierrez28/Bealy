@@ -15,7 +15,7 @@ body {
   overflow-y: hidden;
   display: grid;
   place-content: center;
-  margin-top: 10px;
+  margin-top: 5px;
   color: white;
 }
 
