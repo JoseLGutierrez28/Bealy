@@ -22,8 +22,7 @@ body {
 .container {
   max-width: 360px;
   width: 340px;
-  height: 98vh;
-  max-height: 98vh;
+  max-height: 720px;
   border: 8px solid var(--main-color);
   border-radius: 50px;
 }
