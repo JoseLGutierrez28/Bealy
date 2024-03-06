@@ -11,7 +11,7 @@
 
 body {
   background-color: aliceblue;
-  max-height: 100vh;
+  /* max-height: 100vh; */
   overflow-y: hidden;
   display: grid;
   place-content: center;
@@ -22,8 +22,8 @@ body {
 .container {
   max-width: 360px;
   width: 340px;
-  height: 100vh;
-  max-height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
   border: 8px solid var(--main-color);
   border-radius: 50px;
 }
@@ -35,8 +35,8 @@ body {
 .second-container {
   max-width: 350px;
   width: 324px;
-  height: 100vh;
-  max-height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
   border-radius: 42px;
   border: 8px solid black;
   overflow-y: scroll;
