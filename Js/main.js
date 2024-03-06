@@ -1,25 +1,34 @@
 function updateAge() {
-    let ageIcon = document.getElementById("age");
-    let lettersAge = document.getElementById("lettersAge");
-    let birthDate = new Date("2023-06-07"); // Cambia esta fecha por la de la mascota años-mes-día
-    let currentDate = new Date();
+    let age = document.getElementById("age");
 
-    let ageInYears = currentDate.getFullYear() - birthDate.getFullYear();
-    let monthDiff = currentDate.getMonth() - birthDate.getMonth() + 12 * (currentDate.getFullYear() - birthDate.getFullYear());
+    let anoNacimiento = 2023; // Año de nacimiento
+    let mesNacimiento = 6;    // Mes de nacimiento (1-12)
+    let diaNacimiento = 7;    // Día de nacimiento
 
-    // Si el mes actual es menor que el mes de nacimiento o si es el mismo mes pero el día actual es menor, resta un año
-    if (currentDate.getMonth() < birthDate.getMonth() ||
-        (currentDate.getMonth() === birthDate.getMonth() && currentDate.getDate() < birthDate.getDate())) {
-        ageInYears--; // Resta un año si aún no ha pasado el cumpleaños este año
+    let date = new Date(); // Fecha actual
+    let currentYear = date.getFullYear(); // Año actual
+    let currentMonth = date.getMonth() + 1; // Mes actual
+    let currentDay = date.getDate(); // Día actual
+
+    let ageInYears = currentYear - anoNacimiento; // Diferencia en años
+
+    // Ajustar la diferencia de años si el mes actual es anterior al mes de nacimiento,
+    // o si es el mismo mes pero el día actual es anterior al día de nacimiento
+    if ((currentMonth < mesNacimiento) || (currentMonth === mesNacimiento && currentDay < diaNacimiento)) {
+        ageInYears--;
     }
 
-    if (ageInYears < 1) {
-        ageIcon.classList.add("fa-solid", "fa-" + monthDiff);
-        lettersAge.innerHTML = "Meses";
-    } else {
-        ageIcon.classList.add("fa-solid", "fa-" + ageInYears);
-        lettersAge.innerHTML = " Años";
+    let monthsRemaining = currentMonth - mesNacimiento;
+    if (monthsRemaining < 0) {
+        monthsRemaining += 12; // Ajustar si es negativo
     }
+
+    if (currentDay < diaNacimiento) monthsRemaining--;
+
+    // Si la diferencia en años es 0, mostrar la edad en meses
+    if (ageInYears === 0) age.innerHTML = monthsRemaining + "<span class='text-icons'>Meses</span>";
+    // Si la diferencia en años es 1 o más, mostrar la edad en años
+    else age.innerHTML = ageInYears + "<span class='text-icons'>Años</span>";
 }
 
 updateAge();
