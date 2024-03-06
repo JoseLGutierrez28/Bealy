@@ -11,19 +11,19 @@
 
 body {
   background-color: aliceblue;
-  /* max-height: 100vh; */
+  max-height: 100vh;
   overflow-y: hidden;
   display: grid;
   place-content: center;
-  /* margin-top: 10px; */
+  margin-top: 10px;
   color: white;
 }
 
 .container {
   max-width: 360px;
   width: 340px;
-  /* height: 98vh;
-  max-height: 98vh; */
+  height: 98vh;
+  max-height: 98vh;
   border: 8px solid var(--main-color);
   border-radius: 50px;
 }
@@ -36,7 +36,6 @@ body {
   max-width: 350px;
   width: 324px;
   height: 96vh;
-  max-height: 96vh;
   border-radius: 42px;
   border: 8px solid black;
   overflow-y: scroll;
